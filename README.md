@@ -5,10 +5,12 @@
 
 **Online Shop App** é um projeto mobile cross-platform construído em Flutter voltado para o meu estudo pessoal relacionado a esta tecnologia.
 
-Este projeto consiste em criar um o layout de um App para E-Commerce. Este estudo foi baseado em um projeto do excelente desenvolvedor [Abu Anwar](https://github.com/abuanwar072 "Abu Anwar") do Canal [The Flutter Way](https://www.youtube.com/channel/UCJm7i4g4z7ZGcJA_HKHLCVw "The Flutter Way").
+Este projeto consiste em criar um o layout de um App para E-Commerce. Este estudo foi baseado em um projeto do excelente desenvolvedor [Abu Anwar](https://github.com/abuanwar072 "Abu Anwar") do Canal [The Flutter Way](https://www.youtube.com/channel/UCJm7i4g4z7ZGcJA_HKHLCVw "The Flutter Way"), com quem tenho aprendido muito.
 
 ## Layout Mobile
 <img src="https://github.com/felipeabreu86/flutter_shop_app/blob/main/assets/screens/mobile1.jpeg" height="700" alt="Mobile 1">
+
+<img src="https://github.com/felipeabreu86/flutter_shop_app/blob/main/assets/screens/mobile2.gif" height="700" alt="Mobile 2">
 
 # Tecnologias Utilizadas
 - [flutter](https://flutter.dev/ "flutter")
