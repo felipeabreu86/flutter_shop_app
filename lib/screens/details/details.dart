@@ -14,7 +14,11 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: product.color,
       appBar: buildAppBar(context),
-      body: DetailsBody(product),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: DetailsBody(product),
+        ),
+      ),
     );
   }
 

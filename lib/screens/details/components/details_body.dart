@@ -14,17 +14,25 @@ class DetailsBody extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: size.height - 86.286,
           child: Stack(
             children: [
               Container(
-                margin: EdgeInsets.only(top: size.height * 0.31),
+                margin: EdgeInsets.only(top: size.height * 0.30),
                 height: 500,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(24),
                     topRight: Radius.circular(24),
+                  ),
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.white,
+                      product.color,
+                    ],
+                    stops: [0.2, 1],
+                    begin: const FractionalOffset(0.0, 0.0),
+                    end: const FractionalOffset(0.0, 1.0),
                   ),
                 ),
               ),
