@@ -6,8 +6,8 @@ import 'package:flutter_shop_app/screens/home/components/categories.dart';
 import 'package:flutter_shop_app/screens/home/components/item_card.dart';
 import 'package:flutter_shop_app/shared/constants.dart';
 
-class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+class HomeBody extends StatelessWidget {
+  const HomeBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
