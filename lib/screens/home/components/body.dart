@@ -1,5 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_app/models/product.dart';
+import 'package:flutter_shop_app/screens/details/details.dart';
+import 'package:flutter_shop_app/screens/home/components/categories.dart';
+import 'package:flutter_shop_app/screens/home/components/item_card.dart';
 import 'package:flutter_shop_app/shared/constants.dart';
 
 class Body extends StatelessWidget {
@@ -21,55 +25,30 @@ class Body extends StatelessWidget {
           ),
         ),
         Categories(),
-      ],
-    );
-  }
-}
-
-class Categories extends StatefulWidget {
-  const Categories({Key? key}) : super(key: key);
-
-  @override
-  _CategoriesState createState() => _CategoriesState();
-}
-
-class _CategoriesState extends State<Categories> {
-  List<String> categories = ["Hand bag", "Jewellery", "Footwear", "Dresses"];
-  int selectedIndex = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 25,
-      child: ListView.builder(
-        itemCount: categories.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => buildCategory(index),
-      ),
-    );
-  }
-
-  Widget buildCategory(int index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            categories[index],
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: selectedIndex == index ? kTextColor : kTextLightColor,
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: GridView.builder(
+              itemCount: products.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.74,
+                mainAxisSpacing: kDefaultPadding,
+                crossAxisSpacing: kDefaultPadding,
+              ),
+              itemBuilder: (context, index) => ItemCard(
+                products[index],
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsScreen(products[index]),
+                  ),
+                ),
+              ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: kDefaultPadding / 4),
-            height: 2,
-            width: 30,
-            color: selectedIndex == index ? Colors.black : Colors.transparent,
-          )
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
