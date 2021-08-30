@@ -15,9 +15,7 @@ class DetailsScreen extends StatelessWidget {
       backgroundColor: product.color,
       appBar: buildAppBar(context),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: DetailsBody(product),
-        ),
+        child: DetailsBody(product),
       ),
     );
   }
