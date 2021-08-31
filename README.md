@@ -10,7 +10,7 @@ Este projeto consiste em criar um o layout de um App para E-Commerce. Este estud
 ## Layout Mobile
 <img src="https://github.com/felipeabreu86/flutter_shop_app/blob/main/assets/screens/mobile1.jpeg" height="700" alt="Mobile 1">
 
-<img src="https://github.com/felipeabreu86/flutter_shop_app/blob/main/assets/screens/mobile2.gif" height="700" alt="Mobile 2">
+<img src="https://github.com/felipeabreu86/flutter_shop_app/blob/main/assets/screens/mobile2.jpeg" height="700" alt="Mobile 2">
 
 # Tecnologias Utilizadas
 - [flutter](https://flutter.dev/ "flutter")
