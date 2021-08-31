@@ -22,7 +22,7 @@ class ColorAndSize extends StatelessWidget {
               Row(
                 children: [
                   ColorDot(
-                    color: Color(0xFF356C95),
+                    color: product.color,
                     isSelected: true,
                   ),
                   ColorDot(color: Color(0xFFF8c078)),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/models/product.dart';
+import 'package:flutter_shop_app/screens/details/components/add_to_cart.dart';
 import 'package:flutter_shop_app/screens/details/components/color_and_size.dart';
+import 'package:flutter_shop_app/screens/details/components/counter_with_fav_btn.dart';
+import 'package:flutter_shop_app/screens/details/components/description.dart';
 import 'package:flutter_shop_app/screens/details/components/product_title_with_image.dart';
 import 'package:flutter_shop_app/shared/constants.dart';
 
@@ -17,7 +20,7 @@ class DetailsBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: size.height,
+            height: size.height - AppBar().preferredSize.height,
             child: Stack(
               children: [
                 Container(
@@ -38,7 +41,7 @@ class DetailsBody extends StatelessWidget {
                         Colors.white,
                         product.color,
                       ],
-                      stops: [0.35, 1],
+                      stops: [0.8, 1],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),
                     ),
@@ -46,6 +49,12 @@ class DetailsBody extends StatelessWidget {
                   child: Column(
                     children: [
                       ColorAndSize(product: product),
+                      SizedBox(height: kDefaultPadding / 2),
+                      Description(product: product),
+                      SizedBox(height: kDefaultPadding / 2),
+                      CounterWithFavBtn(),
+                      SizedBox(height: kDefaultPadding / 2),
+                      AddToCart(product: product),
                     ],
                   ),
                 ),
